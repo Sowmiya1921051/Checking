@@ -11,8 +11,8 @@ pool: mylocal
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+      versionSpec: '20.16.0'  # Specify the exact version of Node.js
+  displayName: 'Install Node.js '
 
 
 
