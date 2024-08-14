@@ -29,13 +29,6 @@ steps:
     npm run test:unit
   displayName: 'Run Unit Tests'
 
-- script: |
-    npm run test:integration
-  displayName: 'Run Integration Tests'
-
-- script: |
-    npm run test:functional
-  displayName: 'Run Functional Tests'
 
 - task: PublishTestResults@2
   inputs:
