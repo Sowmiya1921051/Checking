@@ -6,8 +6,7 @@
 trigger:
 - main
 
-pool:
-  vmImage: mylocal
+pool: mylocal
 
 steps:
 - task: NodeTool@0
