@@ -14,7 +14,30 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+
+
+
 - script: |
     npm install
+  displayName: 'Install Dependencies'
+
+- script: |
     npm run build
-  displayName: 'npm install and build'
+  displayName: 'Build the Code'
+
+- script: |
+    npm run test:unit
+  displayName: 'Run Unit Tests'
+
+- script: |
+    npm run test:integration
+  displayName: 'Run Integration Tests'
+
+- script: |
+    npm run test:functional
+  displayName: 'Run Functional Tests'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: '**/test-results/*.xml'
+  displayName: 'Publish Test Results'
